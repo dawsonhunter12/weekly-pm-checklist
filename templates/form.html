@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly PM Maintenance Checklist</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Paint Line Weekly PM Maintenance Checklist</h1>
+        <form method="POST" class="mb-4">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-3">
+                <label>{{ form.technician_name.label }}</label>
+                {{ form.technician_name(class_="form-control") }}
+            </div>
+
+            <!-- Maintenance Checkboxes -->
+            <div class="form-check mb-2">
+                {{ form.rollers_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.rollers_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.re_coilers_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.re_coilers_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.towers_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.towers_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.bridals_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.bridals_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.splicer_die_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.splicer_die_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.wash_tanks_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.wash_tanks_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.tension_stand_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.tension_stand_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.chem_coater_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.chem_coater_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.coater_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.coater_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.ovens_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.ovens_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.tracking_units_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.tracking_units_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.quench_tanks_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.quench_tanks_checked.label }}</label>
+            </div>
+
+            <div class="form-check mb-2">
+                {{ form.electrical_cabinets_checked(class_="form-check-input") }}
+                <label class="form-check-label">{{ form.electrical_cabinets_checked.label }}</label>
+            </div>
+
+            <div class="mb-3">
+                <label>{{ form.comments.label }}</label>
+                {{ form.comments(class_="form-control", rows=4) }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="{{ url_for('log') }}" class="btn btn-secondary">View Maintenance Log</a>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
